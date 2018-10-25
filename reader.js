@@ -33,7 +33,6 @@ app.get('/xml', (req, res) => {
         } else {
             xml = data
         }
-      //  console.log(xml)
         reader.on('done', (data) => {
             res.send(xmlParser.toJson(xml))
             console.log(xmlParser.toJson(xml))
